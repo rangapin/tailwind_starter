@@ -1,13 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full bg-gray-100" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Tailwind Starter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+
+    <title>Online CV</title>
 </head>
-<body>
-    <h1 class="text-3xl">Tailwind Starter</h1>
+
+<body class="h-full">
+<div class="min-h-full">
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-4 w-4" src="images/logo.png" alt="Your Company">
+            </div>
+
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Online CV</a>
+                <a href="https://www.richardangapin.com" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" target="_blank">Porfolio</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: outline/bell -->
+              </button>
+  
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full" src="./images/avatar1.png" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button" class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Heroicon name: outline/bars-3
+  
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                Heroicon name: outline/x-mark
+  
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Online CV</a>
+  
+          <a href="https://www.richardangapin.com" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+        </div>
+
+        <div class="border-t border-gray-700 pt-4 pb-3">
+          <div class="flex items-center px-5">
+            <div class="flex-shrink-0">
+              <img class="h-10 w-10 rounded-full" src="./images/avatar1.png" alt="">
+            </div>
+            <div class="ml-3">
+              <div class="text-base font-medium leading-none text-white">Richard Angapin</div>
+              <div class="text-sm font-medium leading-none text-gray-400">richardangapin@icloud.com</div>
+            </div>
+            <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+      </div>
+    </header>
+
+    <main>
+      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+
+        <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h3 class="text-lg font-medium leading-6 text-gray-900">Applicant Information</h3>
+              <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+            </div>
+            <div class="border-t border-gray-200">
+              <dl>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">Full name</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Richard Angapin</dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">Application for</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Laravel Developer</dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">Email address</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">richardangapin@icloud.com</dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">Salary expectation</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">40 000 EUR</dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">About</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">I love what I do and you will love what I do too.</dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <dt class="text-sm font-medium text-gray-500">Attachments</dt>
+                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                    <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
+                      <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                        <div class="flex w-0 flex-1 items-center">
+                          <!-- Heroicon name: mini/paper-clip -->
+                          <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="ml-2 w-0 flex-1 truncate">resume_back_end_developer.pdf</span>
+                        </div>
+                        <div class="ml-4 flex-shrink-0">
+                          <a href="https://drive.google.com/file/d/1rlPWNUIU0DOLUQx2Y3BsJRcMAm2mcsxe/view?usp=sharing" class="font-medium text-indigo-600 hover:text-indigo-500" target="_blank">Download</a>
+                        </div>
+                      </li>
+                      </li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        
+        <!-- /End replace -->
+      </div>
+    </main>
+  </div>
+  
+  
+  
 </body>
 </html>
